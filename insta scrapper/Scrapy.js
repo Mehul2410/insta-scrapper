@@ -40,7 +40,7 @@ class Scrapy {
 
     async evaluate() {
         try {
-            this.items = await this.load(100)
+            this.items = await this.load(12)
         } catch (error) {
             this.spinner.fail(`There was a problem parsing the page`)
             process.exit()
@@ -91,7 +91,7 @@ class Scrapy {
         var tmp = []
         this.items.forEach(url => {
             tmp.push({
-                "thumbnail_src": url,
+                "image": url,
                 "accessibility_caption": ""
             })
         })          
